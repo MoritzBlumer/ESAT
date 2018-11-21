@@ -1,5 +1,8 @@
 # ESAT – Element Simulating Analysis Tool
 
+Tool that simulates the insertion of elements in a genomic sequence and evaluates the detection rate with Mobster.
+
+
 To run phython scripts individually use python3.4
 
 Additional Programs that are required to run the pipeline:
