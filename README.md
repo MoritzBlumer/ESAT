@@ -72,7 +72,7 @@ bash loop.sh <genomic fragment> <TE sequence> <Output name>
 
 
 
-![Flowchart](Flowchart_in_)
+![Flowchart](Flowchart_in_pictures.pdf)
 
 
 
