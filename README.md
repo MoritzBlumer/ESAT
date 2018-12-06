@@ -32,6 +32,12 @@ Additional programs that are required to run the pipeline:
 ```bash
 bash ESAT.sh <genomic fragment> <TE sequence> <Name of the output files> <Coverage of the read simulation> <Number of insertions> <ID>
 ```
+or
+ ### Start loop with
+ ```bash 
+bash loop_ESAT.sh <genomic fragment> <TE sequence> <Output name>
+```
+ * loop generates new ID for every individual run but sam, bam, fastq (etc) files will be overwritten in each run!
 
 
 ## The pipeline
