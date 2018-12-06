@@ -1,34 +1,39 @@
 # ESAT – Element Simulating Analysis Tool
 
-Tool that simulates the insertion of elements in a genomic sequence and evaluates the detection rate with Mobster.
+ESAT is a tool that simulates the insertion of elements in a genomic sequence and evaluates the detection rate with Mobster.
 
+
+## Requirements
 
 To run phython scripts individually use python3.4
 
-Additional Programs that are required to run the pipeline:
+### Programs 
+Additional programs that are required to run the pipeline:
 
-Bedtools
-Bwa
-Mobster
-Mosaik
-Picard
-Simseq
-Samtools
+* Bedtools (version 2.17, http://bedtools.readthedocs.org/en/latest/)
+* Bwa (version 0.7.5a-r405, https://sourceforge.net/projects/bio-bwa/files/)
+* Mobster (http://sourceforge.net/projects/mobster)
+* Mosaik (version 2.2, https://github.com/wanpinglee/MOSAIK.git/)
+* Picard (https://broadinstitute.github.io/picard/)
+* Simseq (https://github.com/jstjohn/SimSeq)
+* Samtools (version 1.3, https://github.com/samtools/samtools/)
 
 
-Additional Files
 
-Error Profile for SimSeq
+### Additional Files
+
+Error Profile for SimSeq (https://github.com/jstjohn/SimSeq)
 Repetitive elements for Mobster
 
 
-Start the pipeline with
+## Run the Pipeline
+### Start the pipeline with
 
-bash ESAT.sh <genomic fragment> <TE sequence><Name for the output files><Coverage for the read simulation><Number of insertions><ID>
+bash ESAT.sh <genomic fragment> <TE sequence> <Name for the output files> <Coverage for the read simulation> <Number of insertions> <ID>
 
 or
 
-Start loop with
+### Start loop with
 
 bash loop.sh <genomic fragment> <TE sequence> <Output name>
 
