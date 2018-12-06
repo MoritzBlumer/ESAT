@@ -30,7 +30,7 @@ Additional programs that are required to run the pipeline:
 ### Start the pipeline with
 
 ```bash
-bash ESAT.sh <genomic fragment> <TE sequence> <Name for the output files> <Coverage for the read simulation> <Number of insertions> <ID>
+bash ESAT.sh <genomic fragment> <TE sequence> <Name of the output files> <Coverage of the read simulation> <Number of insertions> <ID>
 ```
 
 or
