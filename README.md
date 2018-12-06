@@ -22,8 +22,8 @@ Additional programs that are required to run the pipeline:
 
 ### Additional Files
 
-Error Profile for SimSeq (https://github.com/jstjohn/SimSeq)
-Repetitive elements for Mobster
+* Error Profile for SimSeq (https://github.com/jstjohn/SimSeq)
+* Repetitive elements for Mobster
 
 
 ## Run the Pipeline
@@ -37,37 +37,36 @@ or
 
 bash loop.sh <genomic fragment> <TE sequence> <Output name>
 
-- loop generates new ID for every individual run but sam, bam, fastq (etc) files will be overwritten in each run!
+* loop generates new ID for every individual run but sam, bam, fastq (etc) files will be overwritten in each run!
 
 
 
-The pipeline consists of:
+## The pipeline
 
-- Sequence Simulation sim_seq.py
-	output: simulated sequence (fasta)
-	      	 insert breakpoints (.bed)
+### Steps in the pipeline:
 
-
-
-- bwa indexing of the new sequence
-- sort insert brekpoints file
-- calculation of read number  read_number.py
-
-- read Simulation
-	-change arguments -1 and -2 for different read length (set to 90), use error profile here, 	  	change insert size (set to 500)
-
-- mapping with bwa
-- generate mobster properties file
-- generate vcf file  mobster2vcf_python3.py
-- compare real breakpoints with simulated breakpoints compare_insertions.py
-- generate output summary file
+* Sequence Simulation sim_seq.py; Output: simulated sequence (fasta), insert breakpoints (.bed)
 
 
-Output
 
-- Use Name.sorted.mkdup.bam to view mapped reads
-- Use ID.insertions.sorted.bed for original breakpoints (insert locations)
-- Use Name.analysis.txt output with original and predicted preakpoints (original beakpoint, breakpoint end, Mobster prediction, Coverage, Type, ID)
+* bwa indexing of the new sequence
+* sort insert brekpoints file
+* calculation of read number read_number.py
+
+* read Simulation
+	** change arguments -1 and -2 for different read length (set to 90), use error profile here, 	  	change insert size (set to 500)
+
+* mapping with bwa
+* generate mobster properties file
+* generate vcf file  mobster2vcf_python3.py
+* compare real breakpoints with simulated breakpoints compare_insertions.py
+* generate output summary file
+
+### Output:
+
+* Use Name.sorted.mkdup.bam to view mapped reads
+* Use ID.insertions.sorted.bed for original breakpoints (insert locations)
+* Use Name.analysis.txt output with original and predicted preakpoints (original beakpoint, breakpoint end, Mobster prediction, Coverage, Type, ID)
 
 
 
