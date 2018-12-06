@@ -50,17 +50,17 @@ bash loop.sh <genomic fragment> <TE sequence> <Output name>
 
 
 * bwa indexing of the new sequence
-* sort insert brekpoints file
-* calculation of read number read_number.py
+* Sort insert brekpoints file
+* Calculation of read number read_number.py
 
 * read Simulation
-	** change arguments -1 and -2 for different read length (set to 90), use error profile here, 	  	change insert size (set to 500)
+	 (change arguments -1 and -2 for different read length (set to 90), use error profile here, 	  	change insert size (set to 500))
 
-* mapping with bwa
-* generate mobster properties file
-* generate vcf file  mobster2vcf_python3.py
-* compare real breakpoints with simulated breakpoints compare_insertions.py
-* generate output summary file
+* Mapping with bwa
+* Generate mobster properties file
+* Generate vcf file  mobster2vcf_python3.py
+* Compare real breakpoints with simulated breakpoints compare_insertions.py
+* Generate output summary file
 
 ### Output:
 
