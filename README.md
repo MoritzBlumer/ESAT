@@ -13,31 +13,26 @@ Additional programs that are required to run the pipeline:
 * Bedtools (version 2.17, http://bedtools.readthedocs.org/en/latest/)
 * Bwa (version 0.7.5a-r405, https://sourceforge.net/projects/bio-bwa/files/)
 * Mobster (http://sourceforge.net/projects/mobster)
+* MELT (http://melt.igs.umaryland.edu/index.php)
 * Mosaik (version 2.2, https://github.com/wanpinglee/MOSAIK.git/)
 * Picard (https://broadinstitute.github.io/picard/)
 * Simseq (https://github.com/jstjohn/SimSeq)
 * Samtools (version 1.3, https://github.com/samtools/samtools/)
 
-
-
 ### Additional Files
 
 * Error Profile for SimSeq (https://github.com/jstjohn/SimSeq)
-* Repetitive elements for Mobster
+* Repetitive elements for Mobster/MELT
+
+### Before first use:
+* set paths to java .jar for Mobster, MELT, SimSeq, SamToFastq, MarkDuplicates and CollectInsertSizeMetrics in ESAT.sh
 
 
 ## Run the Pipeline
-### Start the pipeline with
 
 ```bash
 bash ESAT.sh <genomic fragment> <TE sequence> <Name of the output files> <Coverage of the read simulation> <Number of insertions> <ID>
 ```
-or
- ### Start loop with
- ```bash 
-bash loop_ESAT.sh <genomic fragment> <TE sequence> <Output name>
-```
- * loop generates new ID for every individual run but sam, bam, fastq (etc) files will be overwritten in each run!
 
 
 ## The pipeline
@@ -57,19 +52,14 @@ bash loop_ESAT.sh <genomic fragment> <TE sequence> <Output name>
 
 * Mapping with bwa
 * Generate mobster properties file
+* Run Mobster and MELT on the simulated sequence
 * Generate vcf file  mobster2vcf_python3.py
 * Compare real breakpoints with simulated breakpoints compare_insertions.py
 * Generate output summary file
 
 ### Output:
 
-* Use Name.sorted.mkdup.bam to view mapped reads
-* Use ID.insertions.sorted.bed for original breakpoints (insert locations)
-* Use Name.analysis.txt output with original and predicted preakpoints (original beakpoint, breakpoint end, Mobster prediction, Coverage, Type, ID)
-
-
-
-
+* for each ESAT run, a file with statistics of the run will be generated in "./statistics_files"
 
 ![Flowchart](Flowchart.png)
 
