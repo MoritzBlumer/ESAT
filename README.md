@@ -61,8 +61,6 @@ bash ESAT.sh <genomic fragment> <TE sequence> <Name of the output files> <Covera
 
 * for each ESAT run, a file with statistics of the run will be generated in "./statistics_files"
 
-![Flowchart](Flowchart.png)
-
 
 
 
